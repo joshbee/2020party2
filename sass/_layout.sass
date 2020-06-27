@@ -1,0 +1,57 @@
+*
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+
+a
+	text-decoration: none
+	&:hover
+		text-decoration: none
+
+.hide
+	zoom: 1
+	filter: alpha(opacity=0)
+	opacity: 0
+	-webkit-user-select: none
+	-moz-user-select: none
+	-ms-user-select: none
+	user-select: none
+
+body
+	position: relative
+	font-family: 'Noto Sans TC'
+	background: #eee
+
+
+#wrap
+	position: relative
+	overflow: hidden
+	width: 100vw
+	height: 100vh
+	overflow: hidden
+	+background(linear-gradient(to bottom, #ffe850 0%, #b8fc8a 100%))
+	.quiz
+		content: ''
+		width: 75%
+		font-size: 13vw
+		color: #fff
+		font-weight: bold
+		+poa(50%,null,null,50%)
+		+transform(translate(-50%,-50%))
+		+text-shadow(rgba(#000, 1) 0px 0px 12px)
+		letter-spacing: 1vw
+		text-align: center
+		+rwd(pad)
+			font-size: 15vw
+	
+	a
+		font-size: 7vw
+		color: #000
+		+rwd(pad)
+			font-size: 10vw
+		&.prve
+			display: none
+			+poa(50%,null,null,3%)
+			+transform(translate(0,-50%))
+		&.next
+			+poa(50%,3%,null,null)
+			+transform(translate(0,-50%))
+	
